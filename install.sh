@@ -342,6 +342,12 @@ sleep 1
 execute_script "pacman.sh"
 sleep 1
 
+# Custom Changes
+wget -q -O ~/Arch-Hyprland/install-scripts/zsh.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/zsh.sh
+wget -q -O /tmp/replace_reads.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/replace_reads.sh
+chmod +x /tmp/replace_reads.sh
+bash /tmp/replace_reads.sh
+
 # Execute AUR helper script after other installations if applicable
 if [ "$aur_helper" == "paru" ]; then
   execute_script "paru.sh"
@@ -473,8 +479,8 @@ if pacman -Q hyprland &>/dev/null || pacman -Q hyprland-git &>/dev/null; then
   printf "\n${NOTE} However, it is ${YELLOW}highly recommended to reboot${RESET} your system.\n\n"
 
   while true; do
-    echo -n "${CAT} Would you like to reboot now? (y/n): "
-    read HYP
+    # echo -n "${CAT} Would you like to reboot now? (y/n): "
+    HYP="n"
     HYP=$(echo "$HYP" | tr '[:upper:]' '[:lower:]')
 
     if [[ "$HYP" == "y" || "$HYP" == "yes" ]]; then
