@@ -264,7 +264,7 @@ options_command+=(
   "quickshell" "Install quickshell for Desktop-Like Overview?" "OFF"
   "xdph" "Install XDG-DESKTOP-PORTAL-HYPRLAND (for screen share)?" "OFF"
   "zsh" "Install zsh shell with Oh-My-Zsh?" "OFF"
-  # "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
+  "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
   "rog" "Are you installing on Asus ROG laptops?" "OFF"
   "dots" "Download and install pre-configured HyprFlux Hyprland dotfiles?" "OFF"
 )
@@ -341,12 +341,6 @@ execute_script "00-base.sh"
 sleep 1
 execute_script "pacman.sh"
 sleep 1
-
-# Custom Changes
-wget -q -O ~/Arch-Hyprland/install-scripts/zsh.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/zsh.sh
-wget -q -O /tmp/replace_reads.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/replace_reads.sh
-chmod +x /tmp/replace_reads.sh
-bash /tmp/replace_reads.sh
 
 # Execute AUR helper script after other installations if applicable
 if [ "$aur_helper" == "paru" ]; then
@@ -479,8 +473,8 @@ if pacman -Q hyprland &>/dev/null || pacman -Q hyprland-git &>/dev/null; then
   printf "\n${NOTE} However, it is ${YELLOW}highly recommended to reboot${RESET} your system.\n\n"
 
   while true; do
-    # echo -n "${CAT} Would you like to reboot now? (y/n): "
-    HYP="n"
+    echo -n "${CAT} Would you like to reboot now? (y/n): "
+    read HYP
     HYP=$(echo "$HYP" | tr '[:upper:]' '[:lower:]')
 
     if [[ "$HYP" == "y" || "$HYP" == "yes" ]]; then
