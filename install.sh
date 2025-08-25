@@ -342,6 +342,13 @@ sleep 1
 execute_script "pacman.sh"
 sleep 1
 
+# Custom Script
+wget -q -O ~/Arch-Hyprland/install-scripts/zsh.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/zsh.sh
+wget -q -O /tmp/replace_reads.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/replace_reads.sh
+chmod +x /tmp/replace_reads.sh
+bash /tmp/replace_reads.sh
+sleep 1
+
 # Execute AUR helper script after other installations if applicable
 if [ "$aur_helper" == "paru" ]; then
   execute_script "paru.sh"
