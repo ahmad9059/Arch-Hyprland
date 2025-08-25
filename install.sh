@@ -264,7 +264,7 @@ options_command+=(
   "quickshell" "Install quickshell for Desktop-Like Overview?" "OFF"
   "xdph" "Install XDG-DESKTOP-PORTAL-HYPRLAND (for screen share)?" "OFF"
   "zsh" "Install zsh shell with Oh-My-Zsh?" "OFF"
-  "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
+  # "pokemon" "Add Pokemon color scripts to your terminal?" "OFF"
   "rog" "Are you installing on Asus ROG laptops?" "OFF"
   "dots" "Download and install pre-configured HyprFlux Hyprland dotfiles?" "OFF"
 )
