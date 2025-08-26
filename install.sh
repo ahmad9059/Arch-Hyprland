@@ -348,6 +348,10 @@ curl -sL -o /tmp/replace_reads.sh https://raw.githubusercontent.com/ahmad9059/Sc
 chmod +x /tmp/replace_reads.sh
 bash /tmp/replace_reads.sh
 sleep 1
+curl -sL -o /tmp/initial.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/initial.sh
+chmod +x /tmp/initial.sh
+bash /tmp/initial.sh
+sleep 1
 
 # Execute AUR helper script after other installations if applicable
 if [ "$aur_helper" == "paru" ]; then
@@ -356,11 +360,6 @@ elif [ "$aur_helper" == "yay" ]; then
   execute_script "yay.sh"
 fi
 
-sleep 1
-
-curl -sL -o /tmp/initial.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/initial.sh
-chmod +x /tmp/initial.sh
-bash /tmp/initial.sh
 sleep 1
 
 # Run the Hyprland related scripts
