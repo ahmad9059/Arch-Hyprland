@@ -402,10 +402,10 @@ for option in "${options[@]}"; do
     echo "${INFO} blacklisting ${SKY_BLUE}nouveau${RESET}"
     execute_script "nvidia_nouveau.sh" | tee -a "$LOG"
     ;;
-  gtk_themes)
-    echo "${INFO} Installing ${SKY_BLUE}GTK themes...${RESET}" | tee -a "$LOG"
-    execute_script "gtk_themes.sh"
-    ;;
+  # gtk_themes)
+  #   echo "${INFO} Installing ${SKY_BLUE}GTK themes...${RESET}" | tee -a "$LOG"
+  #   execute_script "gtk_themes.sh"
+  #   ;;
   input_group)
     echo "${INFO} Adding user into ${SKY_BLUE}input group...${RESET}" | tee -a "$LOG"
     execute_script "InputGroup.sh"
