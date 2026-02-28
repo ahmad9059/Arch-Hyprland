@@ -1,3 +1,8 @@
+## IMPORTANT! Beginning of March 2026, This project will be archived and it will be maintained by Dwilliams
+- https://github.com/LinuxBeginnings
+- https://github.com/LinuxBeginnings/Arch-Hyprland
+
+
 <div align="center">
 
 # 💌 ** KooL's Arch - Hyprland Install Script ** 💌
@@ -97,7 +102,7 @@ https://github.com/user-attachments/assets/49bc12b2-abaf-45de-a21c-67aacd9bb872
 - If you opted to install SDDM theme, here's the [`LINK`](https://github.com/JaKooLit/simple-sddm-2) which is a modified fork of [`LINK`](https://github.com/Keyitdev/sddm-astronaut-theme)
 - If you opted to install GTK Themes, Icons, here's the [`LINK`](https://github.com/JaKooLit/GTK-themes-icons). This also includes Bibata Modern Ice cursor.
 
-#### 👀 NVidia GPU Owners.
+#### 👀 Nvidia GPU Owners.
 
 - By default, nvidia-dkms will be installed. and only supports GTX 900 and newer. If required to install older driver, edit the nvidia.sh in install-scripts directory
 
@@ -254,7 +259,7 @@ env = WLR_RENDERER_ALLOW_SOFTWARE,1
 
 #### 📒 Final Notes
 
-- join my discord channel [`Discord`](https://discord.com/invite/kool-tech-world)
+- join my discord channel [`Discord`](https://discord.gg/RZJgC7KAKm)
 - Feel free to copy, re-distribute, and use this script however you want. Would appreciate if you give me some loves by crediting my work :)
 
 #### ✍️ Contributing

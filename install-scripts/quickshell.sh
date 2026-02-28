@@ -49,4 +49,3 @@ if [ -d "/usr/local/share/com.github.Aylur.ags" ]; then
 fi
 
 printf "\n%.0s" {1..1}
-
