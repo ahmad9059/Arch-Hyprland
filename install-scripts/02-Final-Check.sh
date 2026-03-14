@@ -10,7 +10,6 @@ packages=(
   imagemagick
   swaync
   swww
-  wallust
   waybar
   wl-clipboard
   wlogout

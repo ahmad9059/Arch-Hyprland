@@ -42,7 +42,6 @@ hypr_package=(
   swaync 
   swww
   unzip # needed later
-  wallust 
   waybar
   wget
   wl-clipboard
@@ -78,7 +77,6 @@ uninstall=(
   cachyos-hyprland-settings
   mako
   rofi
-  wallust-git
   rofi-lbonn-wayland
   rofi-lbonn-wayland-git
 )
