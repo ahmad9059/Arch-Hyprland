@@ -342,15 +342,13 @@ sleep 1
 execute_script "pacman.sh"
 sleep 1
 
-# Custom Script
-curl -sL -o ~/Arch-Hyprland/install-scripts/zsh.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/zsh.sh
-curl -sL -o /tmp/replace_reads.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/replace_reads.sh
-chmod +x /tmp/replace_reads.sh
-bash /tmp/replace_reads.sh
+# Custom HyprFlux Scripts (local)
+HYPRFLUX_DIR="${HYPRFLUX_DIR:-$HOME/HyprFlux}"
+cp "$HYPRFLUX_DIR/scripts/zsh.sh" ~/Arch-Hyprland/install-scripts/zsh.sh
+chmod +x ~/Arch-Hyprland/install-scripts/zsh.sh
+bash "$HYPRFLUX_DIR/scripts/replace_reads.sh"
 sleep 1
-curl -sL -o /tmp/initial.sh https://raw.githubusercontent.com/ahmad9059/Scripts/main/initial.sh
-chmod +x /tmp/initial.sh
-bash /tmp/initial.sh
+bash "$HYPRFLUX_DIR/scripts/initial.sh"
 sleep 1
 
 # Execute AUR helper script after other installations if applicable
